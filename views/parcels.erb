@@ -1,0 +1,29 @@
+<form action="/parcels" method="post">
+  <div class="form-group">
+     <label for="side_one">Length
+     </label>
+     <input id="side_one" name="side_one" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="side_two">Width
+     </label>
+     <input id="side_two" name="side_two" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="side_three">Height
+     </label>
+     <input id="side_three" name="side_three" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="weight">Weight
+     </label>
+     <input id="weight" name="weight" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-lg">Submit</button>
+</form>
+
+<div class="result">
+  <% if @result %>
+    <%= @result.cost_to_ship() %>
+  <% end %>
+</div>
