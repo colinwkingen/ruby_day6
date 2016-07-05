@@ -1,0 +1,24 @@
+<form action="/triangles" method="post">
+  <div class="form-group">
+     <label for="side_one">Side One
+     </label>
+     <input id="side_one" name="side_one" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="side_two">Side Two
+     </label>
+     <input id="side_two" name="side_two" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="side_three">Side Three
+     </label>
+     <input id="side_three" name="side_three" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-lg">Submit</button>
+</form>
+
+<div class="result">
+  <% if @result %>
+    <%= @result.triangle_type() %>
+  <% end %>
+</div>
